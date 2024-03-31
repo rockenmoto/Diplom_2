@@ -10,7 +10,7 @@ from urls import Urls
 class User:
     response = None
 
-    @allure.step('Регистрация нового курьера с возвращением списка из логина и пароля')
+    @allure.step('Регистрация нового пользователя с возвращением списка данных')
     def create_new_user(self):
         login_pass = []
 
@@ -40,6 +40,16 @@ class User:
         # возвращаем список
         return login_pass
 
+    @allure.step('Логин пользователя')
+    def login_user(self, email, password):
+        payload = {
+            "email": email,
+            "password": password
+        }
+        response = requests.post(Urls.login_url, data=payload)
+        return response
+
+    @allure.step('Генерация строки')
     def generate_random_string(self, length):
         letters = string.ascii_lowercase
         random_string = "".join(random.choice(letters) for i in range(length))
