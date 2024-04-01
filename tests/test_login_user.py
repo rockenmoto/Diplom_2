@@ -5,12 +5,12 @@ from data import Data
 
 
 class TestLoginUser:
-    @allure.title('Проверка авторизация пользователя с обязательными полями')
+    @allure.title('Проверка авторизации пользователя с обязательными полями')
     def test_login_user_true(self, user):
         response = user.login_user(Data.user_email, Data.user_password)
         assert response.status_code == 200
 
-    @allure.title('Проверка авторизация с неверным логином или паролем')
+    @allure.title('Проверка авторизации с неверным логином или паролем')
     @pytest.mark.parametrize("email, password",
                              [[Data.user_email, "fake_password"],
                               ["fake_email", Data.user_password],
