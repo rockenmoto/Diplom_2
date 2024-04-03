@@ -35,8 +35,8 @@ class TestCreateUser:
                               ["password", "name"]
                               ])
     def test_create_user_without_required_false(self, field_one, field_two):
-        field_one_data = Generator.generate_random_string(5)
-        field_two_data = Generator.generate_random_string(5)
+        field_one_data = Generator.generate_rdm_str(5)
+        field_two_data = Generator.generate_rdm_str(5)
 
         payload = {
             f"{field_one}": field_one_data,
