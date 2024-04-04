@@ -27,7 +27,6 @@ class User:
             login_pass.append(password)
             login_pass.append(name)
 
-        # возвращаем список
         return login_pass
 
     @allure.step('Логин пользователя')
