@@ -10,7 +10,7 @@ class TestCreateUser:
 
     @allure.title('Проверяем успешное создание пользователя c обязательными полями')
     def test_create_user_true(self, user, user_data):
-        assert len(user_data) == 3
+        assert len(user_data) == 4
 
     @allure.title('Проверяем создание 2 пользователей с одинаковыми данными')
     def test_create_two_same_users_false(self, user, user_data):
