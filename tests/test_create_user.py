@@ -9,11 +9,11 @@ from generator import Generator
 class TestCreateUser:
 
     @allure.title('Проверяем успешное создание пользователя c обязательными полями')
-    def test_create_user_true(self, user, user_data):
+    def test_create_user_true(self, user_data):
         assert len(user_data) == 4
 
     @allure.title('Проверяем создание 2 пользователей с одинаковыми данными')
-    def test_create_two_same_users_false(self, user, user_data):
+    def test_create_two_same_users_false(self, user_data):
         email = user_data[0]
         password = user_data[1]
         name = user_data[2]

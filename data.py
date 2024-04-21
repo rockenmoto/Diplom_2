@@ -8,6 +8,7 @@ class Data:
     # Existing user data
     user_email = 'xmbucxgmysydabh@yandex.ru'
     user_password = 'cpnoyfeqig'
+    same_email = "njdiv@yandex.ru"
 
     # Create order text
     fake_ingredient_text = 'One or more ids provided are incorrect'
@@ -15,3 +16,7 @@ class Data:
 
     # Get order text
     no_auth_text = 'You should be authorised'
+
+    # Ingredients
+    fake_ingredients = "61c0c5a71d1f33001bdaaa6f"
+    valid_ingredients = "61c0c5a71d1f82001bdaaa6f"
