@@ -5,7 +5,6 @@ from data import Data
 
 
 class TestCreateOrder:
-
     @allure.title('Создание заказа авторизированным пользователем с валидным ингредиентом')
     def test_create_order_with_login_with_ingredient_true(self, user, order):
         user_token = user.login_user(Data.user_email, Data.user_password).json()['accessToken']

@@ -7,7 +7,6 @@ from generator import Generator
 
 
 class TestCreateUser:
-
     @allure.title('Проверяем успешное создание пользователя c обязательными полями')
     def test_create_user_true(self, user_data):
         assert len(user_data) == 4
